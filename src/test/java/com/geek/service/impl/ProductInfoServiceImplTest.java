@@ -60,4 +60,12 @@ public class ProductInfoServiceImplTest {
         Assert.assertNotNull(result);
         System.out.println("result = " + result);
     }
+
+    @Test
+    public void increaseStock() {
+    }
+
+    @Test
+    public void decreaseStock() {
+    }
 }

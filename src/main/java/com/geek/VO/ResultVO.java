@@ -12,6 +12,7 @@ public class ResultVO<T> implements Serializable {
 
     private Integer code;// 错误码。
     private String msg;// 提示信息。
+    //    private String msg = "";// 提示信息。默认返回 "" 空字符串，否则返回 null。
     private T data;// 返回具体内容。
 }
 
