@@ -2,7 +2,7 @@ package com.geek.service.impl;
 
 import com.geek.dataObject.ProductInfo;
 import com.geek.enums.ProductStatusEnum;
-import com.geek.service.ProductInfoService;
+import com.geek.service.IProductInfoService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +20,7 @@ import java.util.List;
 public class ProductInfoServiceImplTest {
 
     @Autowired
-    private ProductInfoService productInfoService;
+    private IProductInfoService productInfoService;
 
     @Test
     public void findOne() {

@@ -2,6 +2,9 @@ package com.geek.utils;
 
 import java.util.Random;
 
+/**
+ * @author geek
+ */
 public class KeyUtil {
 
     /**
@@ -17,4 +20,5 @@ public class KeyUtil {
 
         return System.currentTimeMillis() + String.valueOf(number);
     }
+
 }

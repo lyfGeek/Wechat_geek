@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author geek
+ */
 @Entity
 @Data
 @DynamicUpdate
@@ -21,6 +24,7 @@ public class ProductCategory implements Serializable {
     private Integer categoryType;// 类目编号。
     private Date create_time;
     private Date update_time;
+
 }
 
 /*

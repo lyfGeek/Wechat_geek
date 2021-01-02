@@ -16,7 +16,7 @@ import java.util.List;
 public class OrderDetailRepositoryTest {
 
     @Autowired
-    private OrderDetailRepository repository;
+    private IOrderDetailRepository repository;
 
     @Test
     public void testSave() {

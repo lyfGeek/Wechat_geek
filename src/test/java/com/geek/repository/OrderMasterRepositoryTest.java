@@ -19,7 +19,7 @@ public class OrderMasterRepositoryTest {
     private final String OPENID = "110110";
 
     @Autowired
-    private OrderMasterRepository repository;
+    private IOrderMasterRepository repository;
 
     @Test
     public void testSave() {

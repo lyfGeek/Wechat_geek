@@ -17,7 +17,7 @@ import java.util.List;
 public class ProductCategoryRepositoryTest {
 
     @Autowired
-    private ProductCategoryRepository repository;
+    private IProductCategoryRepository repository;
 
     @Test
     public void testFindOne() {

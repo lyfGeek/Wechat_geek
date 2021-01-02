@@ -16,7 +16,7 @@ import java.util.List;
 public class ProductInfoRepositoryTest {
 
     @Autowired
-    private ProductInfoRepository repository;
+    private IProductInfoRepository repository;
 
     @Test
     public void testSave() {

@@ -4,6 +4,8 @@ import lombok.Data;
 
 /**
  * 购物车。
+ *
+ * @author geek
  */
 @Data
 public class CartDTO {
@@ -21,4 +23,5 @@ public class CartDTO {
         this.productId = productId;
         this.productQuantity = productQuantity;
     }
+
 }

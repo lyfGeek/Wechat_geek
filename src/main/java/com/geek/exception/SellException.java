@@ -2,6 +2,9 @@ package com.geek.exception;
 
 import com.geek.enums.ResultEnum;
 
+/**
+ * @author geek
+ */
 public class SellException extends RuntimeException {
 
     private Integer code;
@@ -21,4 +24,5 @@ public class SellException extends RuntimeException {
         super(message);
         this.code = code;
     }
+
 }

@@ -7,6 +7,9 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+/**
+ * @author geek
+ */
 @Entity
 @Data
 public class ProductInfo implements Serializable {

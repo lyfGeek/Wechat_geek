@@ -5,8 +5,8 @@ import com.geek.dto.CartDTO;
 import com.geek.enums.ProductStatusEnum;
 import com.geek.enums.ResultEnum;
 import com.geek.exception.SellException;
-import com.geek.repository.ProductInfoRepository;
-import com.geek.service.ProductInfoService;
+import com.geek.repository.IProductInfoRepository;
+import com.geek.service.IProductInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,11 +15,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * @author geek
+ */
 @Service
-public class ProductInfoServiceImpl implements ProductInfoService {
+public class ProductInfoServiceImpl implements IProductInfoService {
 
     @Autowired
-    private ProductInfoRepository repository;
+    private IProductInfoRepository repository;
 
     @Override
     public ProductInfo findOne(String productId) {
@@ -59,7 +62,6 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 
             repository.save(productInfo);
         }
-
     }
 
     @Override
@@ -81,4 +83,5 @@ public class ProductInfoServiceImpl implements ProductInfoService {
             repository.save(productInfo);
         }
     }
+
 }

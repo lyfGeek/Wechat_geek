@@ -11,7 +11,9 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-//@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)// deprecated.
+/**
+ * @author geek
+ */ //@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)// deprecated.
 //@JsonInclude(JsonInclude.Include.NON_NULL)// "orderDetailList": null
 // 全局配置。——> application.yml
 //   jackson:

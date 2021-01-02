@@ -4,9 +4,12 @@ import lombok.Getter;
 
 /**
  * 商品状态。
+ *
+ * @author geek
  */
 @Getter
 public enum ProductStatusEnum {
+
     UP(0, "在架。"),
     DOWN(1, "下架。");
 
@@ -18,4 +21,5 @@ public enum ProductStatusEnum {
         this.code = code;
         this.message = message;
     }
+
 }

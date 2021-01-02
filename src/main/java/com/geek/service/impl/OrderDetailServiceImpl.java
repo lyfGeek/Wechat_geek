@@ -10,10 +10,10 @@ import com.geek.enums.OrderStatusEnum;
 import com.geek.enums.PayStatusEnum;
 import com.geek.enums.ResultEnum;
 import com.geek.exception.SellException;
-import com.geek.repository.OrderDetailRepository;
-import com.geek.repository.OrderMasterRepository;
-import com.geek.service.OrderDetailService;
-import com.geek.service.ProductInfoService;
+import com.geek.repository.IOrderDetailRepository;
+import com.geek.repository.IOrderMasterRepository;
+import com.geek.service.IOrderDetailService;
+import com.geek.service.IProductInfoService;
 import com.geek.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -30,18 +30,21 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author geek
+ */
 @Service
 @Slf4j
-public class OrderDetailServiceImpl implements OrderDetailService {
+public class OrderDetailServiceImpl implements IOrderDetailService {
 
     @Autowired
-    private ProductInfoService productInfoService;
+    private IProductInfoService productInfoService;
 
     @Autowired
-    private OrderDetailRepository orderDetailRepository;
+    private IOrderDetailRepository orderDetailRepository;
 
     @Autowired
-    private OrderMasterRepository orderMasterRepository;
+    private IOrderMasterRepository orderMasterRepository;
 
     /**
      * 创建订单。
@@ -251,4 +254,5 @@ public class OrderDetailServiceImpl implements OrderDetailService {
 
         return orderDTO;
     }
+
 }

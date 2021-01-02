@@ -4,7 +4,10 @@ import com.geek.dto.OrderDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-public interface OrderDetailService {
+/**
+ * @author geek
+ */
+public interface IOrderDetailService {
 
     /**
      * 创建订单。
@@ -54,4 +57,5 @@ public interface OrderDetailService {
      * @return
      */
     OrderDTO paid(OrderDTO orderDTO);
+
 }

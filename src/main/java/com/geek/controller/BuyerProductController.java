@@ -5,8 +5,8 @@ import com.geek.VO.ProductVO;
 import com.geek.VO.ResultVO;
 import com.geek.dataObject.ProductCategory;
 import com.geek.dataObject.ProductInfo;
-import com.geek.service.CategoryService;
-import com.geek.service.ProductInfoService;
+import com.geek.service.ICategoryService;
+import com.geek.service.IProductInfoService;
 import com.geek.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,15 +18,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author geek
+ */
 @RestController
 @RequestMapping("/buyer/product")
 public class BuyerProductController {
 
     @Autowired
-    private ProductInfoService productInfoService;
+    private IProductInfoService productInfoService;
 
     @Autowired
-    private CategoryService categoryService;
+    private ICategoryService categoryService;
 
     @GetMapping("/list")
     public ResultVO list() {
@@ -85,6 +88,5 @@ public class BuyerProductController {
 
         return resultVO;*/
     }
-
 
 }

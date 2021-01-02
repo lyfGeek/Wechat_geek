@@ -7,6 +7,9 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+/**
+ * @author geek
+ */
 @Entity
 @Data
 public class OrderDetail implements Serializable {
@@ -25,4 +28,5 @@ public class OrderDetail implements Serializable {
     private Integer productQuantity;// 商品数量。
 
     private String productIcon;// 商品小图。
+
 }

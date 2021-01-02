@@ -8,6 +8,8 @@ import java.math.BigDecimal;
 
 /**
  * 商品 id。
+ *
+ * @author geek
  */
 @Data
 public class ProductInfoVO implements Serializable {
@@ -26,4 +28,5 @@ public class ProductInfoVO implements Serializable {
 
     @JsonProperty("icon")
     private String productIcon;
+
 }

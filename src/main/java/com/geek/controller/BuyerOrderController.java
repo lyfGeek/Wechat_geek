@@ -6,8 +6,8 @@ import com.geek.dto.OrderDTO;
 import com.geek.enums.ResultEnum;
 import com.geek.exception.SellException;
 import com.geek.form.OrderForm;
-import com.geek.service.BuyerService;
-import com.geek.service.OrderDetailService;
+import com.geek.service.IBuyerService;
+import com.geek.service.IOrderDetailService;
 import com.geek.utils.ResultVOUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,18 +23,27 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author geek
+ */
 @RestController
 @RequestMapping("/buyer/order")
 @Slf4j
 public class BuyerOrderController {
 
     @Autowired
-    private OrderDetailService orderDetailService;
+    private IOrderDetailService orderDetailService;
 
     @Autowired
-    private BuyerService buyerService;
+    private IBuyerService buyerService;
 
-    // 创建订单。
+    /**
+     * 创建订单。
+     *
+     * @param orderForm
+     * @param bindingResult
+     * @return
+     */
     /*
     name:张三
 phone:12345678901
@@ -67,7 +76,14 @@ items:[{productId: "123457", productQuantity: 2}]
 
     }
 
-    // 订单列表。
+    /**
+     * 订单列表。
+     *
+     * @param openid
+     * @param page
+     * @param size
+     * @return
+     */
     // 192.168.0.108:8080/sell/buyer/order/list?openid=lyfGeek&page&size
     @GetMapping("/list")
     public ResultVO<List<OrderDTO>> list(@RequestParam("openid") String openid,
@@ -90,7 +106,13 @@ items:[{productId: "123457", productQuantity: 2}]
 //        return resultVO;
     }
 
-    // 订单详情。
+    /**
+     * 订单详情。
+     *
+     * @param openid
+     * @param orderId
+     * @return
+     */
     // 192.168.0.108:8080/sell/buyer/order/detail?openid=lyfGeek&orderId=1587108908282657149
     @GetMapping("/detail")
     public ResultVO<OrderDTO> detail(@RequestParam("openid") String openid,
@@ -103,9 +125,15 @@ items:[{productId: "123457", productQuantity: 2}]
         return ResultVOUtil.success(orderDTO);
     }
 
-    // 取消订单。
+    /**
+     * 取消订单。
+     *
+     * @param openid
+     * @param orderId
+     * @return
+     */
     // 192.168.0.108:8080/sell/buyer/order/cancel
-    @PostMapping("cancel")
+    @PostMapping("/cancel")
     public ResultVO cancel(@RequestParam("openid") String openid,
                            @RequestParam("orderId") String orderId) {
         // 不安全。
@@ -116,4 +144,5 @@ items:[{productId: "123457", productQuantity: 2}]
         buyerService.cancelOrder(openid, orderId);
         return ResultVOUtil.success();
     }
+
 }

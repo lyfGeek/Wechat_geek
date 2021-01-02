@@ -2,6 +2,9 @@ package com.geek.utils;
 
 import com.geek.VO.ResultVO;
 
+/**
+ * @author geek
+ */
 public class ResultVOUtil {
 
     public static ResultVO success(Object object) {

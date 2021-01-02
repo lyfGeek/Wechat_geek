@@ -4,8 +4,10 @@ import com.geek.dto.OrderDTO;
 
 /**
  * 买家。
+ *
+ * @author geek
  */
-public interface BuyerService {
+public interface IBuyerService {
 
     /**
      * 查询一个订单。
@@ -24,4 +26,5 @@ public interface BuyerService {
      * @return
      */
     OrderDTO cancelOrder(String openid, String orderId);
+
 }

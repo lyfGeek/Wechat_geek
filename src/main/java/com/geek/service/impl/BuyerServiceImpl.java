@@ -3,18 +3,21 @@ package com.geek.service.impl;
 import com.geek.dto.OrderDTO;
 import com.geek.enums.ResultEnum;
 import com.geek.exception.SellException;
-import com.geek.service.BuyerService;
-import com.geek.service.OrderDetailService;
+import com.geek.service.IBuyerService;
+import com.geek.service.IOrderDetailService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author geek
+ */
 @Service
 @Slf4j
-public class BuyerServiceImpl implements BuyerService {
+public class BuyerServiceImpl implements IBuyerService {
 
     @Autowired
-    private OrderDetailService orderDetailService;
+    private IOrderDetailService orderDetailService;
 
     /**
      * 查询一个订单。
@@ -57,4 +60,5 @@ public class BuyerServiceImpl implements BuyerService {
         }
         return orderDTO;
     }
+
 }

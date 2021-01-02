@@ -2,6 +2,9 @@ package com.geek.enums;
 
 import lombok.Getter;
 
+/**
+ * @author geek
+ */
 @Getter
 public enum OrderStatusEnum {
 
@@ -17,4 +20,5 @@ public enum OrderStatusEnum {
         this.code = code;
         this.message = message;
     }
+
 }

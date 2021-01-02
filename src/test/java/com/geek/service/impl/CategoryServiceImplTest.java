@@ -1,7 +1,7 @@
 package com.geek.service.impl;
 
 import com.geek.dataObject.ProductCategory;
-import com.geek.service.CategoryService;
+import com.geek.service.ICategoryService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +17,7 @@ import java.util.List;
 public class CategoryServiceImplTest {
 
     @Autowired
-    private CategoryService categoryService;
+    private ICategoryService categoryService;
 
     @Test
     public void findOne() {

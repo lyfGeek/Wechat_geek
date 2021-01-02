@@ -4,7 +4,10 @@ import com.geek.dataObject.ProductCategory;
 
 import java.util.List;
 
-public interface CategoryService {
+/**
+ * @author geek
+ */
+public interface ICategoryService {
 
     ProductCategory findOne(Integer categoryId);
 
@@ -13,4 +16,5 @@ public interface CategoryService {
     List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 
     ProductCategory save(ProductCategory productCategory);
+
 }

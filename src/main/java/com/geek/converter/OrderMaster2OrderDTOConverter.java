@@ -7,6 +7,9 @@ import org.springframework.beans.BeanUtils;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author geek
+ */
 public class OrderMaster2OrderDTOConverter {
 
     public static OrderDTO convert(OrderMaster orderMaster) {
@@ -20,4 +23,5 @@ public class OrderMaster2OrderDTOConverter {
                 convert(e)
         ).collect(Collectors.toList());
     }
+
 }
